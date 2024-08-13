@@ -10,22 +10,21 @@ class Solution(object):
         seen = {}
 
         for i, num in enumerate(nums):
-            
+
             # Hitung selisih antara target dan angka saat ini
-            selisih  = target - num
+            selisih = target - num
+            print(selisih)
 
             # Cek apakah selisih sudah ada dalam dictionary
             if selisih in seen:
                 return [seen[selisih], i]
 
             seen[num] = i
-        
+
         return []
-        
-        # i = 0
-        # while i < len(nums):
-        #     temp = nums[i] + nums[i+1]
-        #     if temp == target:
-        #         print(nums[i])
-        #     i += 1 
-        
+
+
+solution = Solution()
+nums = [1, 2, 6, 7]
+result = solution.twoSum(nums, 9)
+print(result)
