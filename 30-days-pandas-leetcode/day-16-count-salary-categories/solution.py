@@ -43,13 +43,13 @@ account_df = pd.DataFrame(data)
 def count_salary_categories(accounts):
     return pd.DataFrame(
         {
-            "category": ["Low Salary", "Average Salary", "High Salary"],
-            "account_count": [
-                accounts[accounts.income < 20000].shape[0],
+            "category": ["High Salary", "Average Salary", "Low Salary"],
+            "accounts_count": [
+                accounts[accounts.income > 50000].shape[0],
                 accounts[(accounts.income >= 20000) & (accounts.income <= 50000)].shape[
                     0
                 ],
-                accounts[accounts.income > 50000].shape[0],
+                accounts[accounts.income < 20000].shape[0],
             ],
         }
     )
