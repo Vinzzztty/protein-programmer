@@ -1,3 +1,5 @@
 answer.py
 answer2.py
 .venv
+__pycache__/
+*.pyc
